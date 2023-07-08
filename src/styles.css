@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .input_text {
+    @apply border-2 rounded-md mx-2;
+  }
+  .btn {
+    @apply px-3 py-2 bg-slate-600 text-white rounded-md m-3;
+  }
+  .checkboxSize {
+    @apply w-4 h-4 mx-2;
+  }
+  .disabled {
+    @apply cursor-not-allowed;
+  }
+}

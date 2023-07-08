@@ -1,0 +1,63 @@
+<div class="container mx-auto w-10/12">
+  <div class="text-center w-3/6 mx-auto p-8 bg-slate-500">
+    <h1 class="p-4 text-white text-2xl">Password Generator</h1>
+    <div class="my-2">
+      <label for="pwd">Enter length</label>
+      <input
+        id="pwd"
+        type="number"
+        [(ngModel)]="passwordLength"
+        class="input_text"
+      />
+    </div>
+
+    <div class="my-2">
+      <label for="alphabets">Use alphabets</label>
+      <input
+        id="alphabets"
+        type="checkbox"
+        class="checkboxSize"
+        [(ngModel)]="alphabetChecked"
+      />
+    </div>
+
+    <div class="my-2">
+      <label for="number">Use number</label>
+      <input
+        id="number"
+        type="checkbox"
+        class="checkboxSize"
+        [(ngModel)]="numberChecked"
+      />
+    </div>
+
+    <div class="my-2">
+      <label for="symbols">Use Symbols</label>
+      <input
+        id="symbols"
+        type="checkbox"
+        class="checkboxSize"
+        [(ngModel)]="symbolChecked"
+      />
+    </div>
+
+    <button
+      (click)="generatePwd()"
+      class="btn"
+      [disabled]="disabledBtn()"
+      [class.disabled]="disabledBtn()"
+    >
+      Generate Password
+    </button>
+
+    <div>
+      <label for="generatedPwd">Your Password</label>
+      <input
+        type="text"
+        id="generatedPwd"
+        [value]="generatedPwd"
+        class="input_text"
+      />
+    </div>
+  </div>
+</div>
