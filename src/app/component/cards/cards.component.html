@@ -1,0 +1,14 @@
+<p>cards works! {{ lengthy | currency }}</p>
+
+<div>
+  <p>Today is {{ date | date }}</p>
+  <p>Or if you prefer, {{ date | date : "fullDate" }}</p>
+  <p>The time is {{ date | date : "h:mm a z" }}</p>
+</div>
+
+<div *ngFor="let obj of object | keyvalue">{{ obj.key }} : {{ obj.value }}</div>
+
+<p>{{ 0.5 | percent }}</p>
+
+<p>{{ title | titlecase }}</p>
+<p>{{ title | basic : "extension" : "uppercase" }}</p>
